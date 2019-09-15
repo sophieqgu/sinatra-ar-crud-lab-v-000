@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
   end 
   
   patch '/articles/:id' do 
-    @article = Model.update(params[:id], params[:title], params[:content])
+    @article = Model.update(params)
     redirect to "/articles/#{@article.id}"
   end 
   
