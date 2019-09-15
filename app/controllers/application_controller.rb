@@ -35,12 +35,12 @@ class ApplicationController < Sinatra::Base
     erb :edit 
   end 
   
-  patch 'articles/:id' do 
+  patch '/articles/:id' do 
     Model.update(params[:id], params[:title], params[:content])
     redirect_to '/articles/:id'
   end 
   
-  delete 'articles/:id/delete' do 
+  delete '/articles/:id/delete' do 
     Model.delete(params[:id])
     redirect_to '/articles' 
   end 
