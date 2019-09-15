@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
   end 
   
   patch 'articles/:id' do 
-    Model.update
+    Model.update(params[:id], params)
   
   delete 
   
