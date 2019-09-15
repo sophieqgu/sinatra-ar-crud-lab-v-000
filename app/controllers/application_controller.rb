@@ -1,5 +1,5 @@
-
-require_relative '../../config/environment'
+require_relative '../../config/environment'  
+require_relative '../models/article'
 
 class ApplicationController < Sinatra::Base
 
