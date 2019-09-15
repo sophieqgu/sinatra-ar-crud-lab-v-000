@@ -36,12 +36,13 @@ class ApplicationController < Sinatra::Base
   end 
   
   patch '/articles/:id' do 
-    @article = Article.update(params)
+    @article = Article.find(params[:id])
+    @article.update(params)
     redirect to "/articles/#{@article.id}"
   end 
   
   delete '/articles/:id/delete' do 
-    Model.delete(params[:id])
+    Article.delete(params[:id])
     redirect to '/articles' 
   end 
 end
