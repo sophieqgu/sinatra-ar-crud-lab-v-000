@@ -40,6 +40,6 @@ class ApplicationController < Sinatra::Base
     redirect_to '/articles/:id'
   end 
   
-  
+  delete 'articles/:id/delete' do 
   
 end
