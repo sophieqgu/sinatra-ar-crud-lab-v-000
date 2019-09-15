@@ -42,6 +42,6 @@ class ApplicationController < Sinatra::Base
   
   delete 'articles/:id/delete' do 
     Model.delete(params[:id])
-    redirect_to :index 
+    redirect_to '/articles' 
   end 
 end
