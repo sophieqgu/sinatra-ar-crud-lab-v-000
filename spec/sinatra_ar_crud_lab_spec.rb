@@ -41,7 +41,7 @@ describe "Magazine App" do
     describe 'index action' do
       it 'responds with a 200 status code' do
         get "/articles"
-        #expect(last_response.status).to eq(200)
+        expect(last_response.status).to eq(200)
       end
 
       it "displays all the articles" do
@@ -54,7 +54,7 @@ describe "Magazine App" do
     describe 'show action' do
       it 'show page responds with a 200 status code' do
         get "/articles/#{@article1.id}"
-        #expect(last_response.status).to eq(200)
+        expect(last_response.status).to eq(200)
       end
 
       it "show page displays the article's title" do
